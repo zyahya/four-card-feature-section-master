@@ -1,0 +1,106 @@
+/* start global rules */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  background-color: hsl(0, 0%, 98%);
+}
+/* end global rules */
+/* start nav */
+nav {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+nav h1:first-child {
+  font-weight: 200;
+  color: hsl(234, 12%, 34%);
+  margin: 10px;
+}
+nav :nth-child(2){
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+  margin: 10px;
+}
+nav p {
+  width: 540px;
+  margin: auto;
+  color: hsl(229, 6%, 66%);
+  padding-top: 10px;
+}
+/* end nav */
+/* start card */
+.container {
+  padding-right: 30px;
+  padding-left: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  height: 300px;
+  width: 350px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.214);
+}
+.card h4 {
+  color: hsl(234, 12%, 34%);
+  font-size: 20px;
+}
+.card p {
+  color: hsl(229, 6%, 66%);
+}
+.card img {
+  width: 70px;
+  margin-left: 50px;
+  align-self: flex-end;
+}
+.card:first-child {
+  background-image: linear-gradient(to bottom, hsl(180, 62%, 55%) 2%, rgba(0, 128, 0, 0) 2%);
+}
+.card:nth-child(2) {
+  background-image: linear-gradient(to bottom, hsl(0, 78%, 62%) 2%, rgba(0, 128, 0, 0) 2%);
+}
+.card:nth-child(3) {
+  background-image: linear-gradient(to bottom, hsl(212, 86%, 64%) 2%, rgba(0, 128, 0, 0) 2%);
+}
+.card:nth-child(4) {
+  background-image: linear-gradient(to bottom, hsl(34, 97%, 64%) 2%, rgba(0, 128, 0, 0) 2%);
+}
+/* end card */
+/* start responsive */
+@media (max-width: 767px) {
+  nav p {
+    max-width: 80%;
+  }
+  .card {
+    margin: 5px 0;
+  }
+}
+@media (min-width: 1250px) {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .card {
+    position: relative;
+  }
+  .card:first-child {
+    margin-top: calc(350px / 2);
+  }
+  .card:nth-child(3) {
+    margin-top: calc(350px / 2);
+  }
+  .card:nth-child(4) {
+    margin-top: calc(-280px / 2);
+  }
+}
+/* end responsive */
